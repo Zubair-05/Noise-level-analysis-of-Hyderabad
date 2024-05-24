@@ -1,0 +1,35 @@
+ import pandas as pd
+ import numpy as np
+ import matplotlib.pyplot as plt
+ import seaborn as sns
+ %matplotlib inline
+ assignment=pd.read_excel('/content/Noise_Data_2016+2017 
+missed added.xlsx')
+# Jeedimatla(I)
+ assignment['Jeedimatla(I)'].plot(kind='hist', bins=20, 
+title='Jeedimatla - Industrial')
+ plt.xlabel("Noise Level (in dB)")
+ plt.ylabel("Frequency in a year")
+ plt.gca().spines[['top', 'right',]].set_visible(False)
+ plt.show()
+ # paradise(C)
+ assignment['Paradise©'].plot(kind='hist', bins=20, 
+title='Paradise - Commercial')
+ plt.xlabel("Noise Level (in dB)")
+ plt.ylabel("Frequency in a year")
+ plt.gca().spines[['top', 'right',]].set_visible(False)
+ plt.show()
+ # Tarnaka(R)
+ assignment['Tarnaka(R)'].plot(kind='hist', bins=20, 
+title='Tarnaka - Residential')
+ plt.xlabel("Noise Level (in dB)")
+ plt.ylabel("Frequency in a year")
+ plt.gca().spines[['top', 'right',]].set_visible(False)
+ plt.show()
+ #Gachibowli(S)
+ assignment['Gachibowli(s)'].plot(kind='hist', bins=20, 
+title='Gachibowli - Silence Zone')
+ plt.xlabel("Noise Level (in dB)")
+ plt.ylabel("Frequency in a year")
+ plt.gca().spines[['top', 'right',]].set_visible(False)
+ plt.show()
