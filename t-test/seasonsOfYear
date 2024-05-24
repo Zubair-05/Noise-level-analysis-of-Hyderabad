@@ -1,0 +1,21 @@
+ import pandas as pd
+ from scipy import stats
+ # Read data from Excel file
+ df = pd.read_excel('day-night hypothesis.xlsx')
+ print(df.columns)
+ group1 = df['Winter'].dropna().tolist()
+ group2 = df['Summer'].dropna().tolist()
+ group3 = df['Monsoon'].dropna().tolist()
+ # Perform one-way ANOVA
+ f_statistic, p_value = stats.f_oneway(group1, group2, group3)
+ # Print the results
+ print("ANOVA Results:")
+ print(f"   F-statistic: {f_statistic}")
+ print(f"   p-value: {p_value}")
+ # Interpret the results
+ if p_value < 0.05:
+    print("Reject null hypothesis: There is a significant 
+difference between the means of the groups.")
+ else:
+    print("Fail to reject null hypothesis: There is no 
+significant difference between the means of the groups.")
