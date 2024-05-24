@@ -1,0 +1,33 @@
+ import pandas as pd
+ import numpy as np
+ import matplotlib.pyplot as plt
+ import seaborn as sns
+ %matplotlib inline
+ assignment=pd.read_excel('/content/Noise_Data_2016+2017 
+missed added.xlsx')
+#ZOO(S)
+ import seaborn as sns
+ joint = sns.jointplot(y='Date', x='Zoo(S)', data=assignment, 
+kind='scatter')
+ ax = joint.ax_joint
+ value = 50
+ ax.axvline(value, color='red', linestyle='--')
+ sns.regplot(x=x, y=y, scatter=False, color='red')
+ #Gaddapotharam(I)
+ joint =sns.jointplot(y='Date', x='Gaddapotharam(I)', 
+data=assignment, kind='scatter')
+ ax = joint.ax_joint
+ value = 75
+ ax.axvline(value, color='red', linestyle='--')
+ #Jubilee Hills(R)
+ joint = sns.jointplot(y='Date', x='Jubilee Hills(R)', 
+data=assignment, kind='scatter')
+ ax = joint.ax_joint
+ value = 55
+ ax.axvline(value, color='red', linestyle='--')
+ #Abids(C)
+ joint = sns.jointplot(y='Date', x='Abids©', data=assignment, 
+kind='scatter')
+ ax = joint.ax_joint
+ value = 65
+ ax.axvline(value, color='red', linestyle='--')
